@@ -1,11 +1,11 @@
 FROM archlinux/archlinux
-RUN pacman -Syu
+RUN pacman -Sy
 RUN yes |  pacman --noconfirm -S sudo
-RUN yes | sudo pacman --noconfirm -Syu gstreamer  gst-plugins-base-libs gst-libav gst-plugins-base gst-plugins-good gst-plugin-rswebrtc gst-plugin-webrtchttp
-RUN yes | sudo pacman --noconfirm -Syu pulseaudio xorg-server-xvfb openbox 	chromium
+RUN yes | sudo pacman --noconfirm -S gstreamer  gst-plugins-base-libs gst-libav gst-plugins-base gst-plugins-good gst-plugin-rswebrtc gst-plugin-webrtchttp
+RUN yes | sudo pacman --noconfirm -S pulseaudio xorg-server-xvfb openbox 	chromium
 
-RUN yes | sudo pacman --noconfirm -Syu dbus
-RUN yes | sudo pacman --noconfirm -Syu noto-fonts
+RUN yes | sudo pacman --noconfirm -S dbus
+RUN yes | sudo pacman --noconfirm -S noto-fonts
 RUN ls
 RUN usermod -a -G audio root
 COPY openbox.xml /etc/openbox.xml
