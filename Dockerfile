@@ -1,7 +1,7 @@
 FROM archlinux/archlinux
 RUN pacman -Sy
 RUN yes |  pacman --noconfirm -S sudo
-RUN yes | sudo pacman --noconfirm -S gstreamer  gst-plugins-base-libs gst-libav gst-plugins-base gst-plugins-good gst-plugin-rswebrtc gst-plugin-webrtchttp
+RUN yes | sudo pacman --noconfirm -S gstreamer gst-plugins-ugly  gst-plugins-base-libs gst-libav gst-plugins-base gst-plugins-good gst-plugin-rswebrtc gst-plugin-webrtchttp
 RUN yes | sudo pacman --noconfirm -S pulseaudio xorg-server-xvfb openbox 	chromium
 
 RUN yes | sudo pacman --noconfirm -S dbus
